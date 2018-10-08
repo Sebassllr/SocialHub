@@ -1,7 +1,18 @@
-.background-blue{
+.backgroundBlue{
   background: #64b2e9;
 }
-
+.display-flex{
+  display: flex;
+}
+.height-200{
+  height: 300px;
+}
+.width-500{
+  width: 700px;
+}
+.border{
+  border: 1px solid #cccccc;
+}
 .App {
   text-align: center;
 }

@@ -1,0 +1,56 @@
+.box{
+    box-shadow: 5px 10px #cccccc30;
+    margin: 10px;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    width: 300px;
+    height: 350px;
+    cursor: pointer;
+}
+.box:hover{
+    background: #FAFAFA;
+}
+.arvo{
+    font-family: 'Arvo', serif;
+}
+.center{
+    margin: auto;
+}
+.title{
+    margin-top: 5px;
+    font-size: 30px;
+}
+.display-flex{
+    display: flex;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #64b2e9;
+    padding: 0;   
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+.description{
+    display: flex;
+    text-align: justify;
+}
+.margin-content{
+    margin: 5px 15px;
+}
+.item:nth-child(3n) {
+    page-break-after: always; /* CSS 2.1 syntax */
+    break-after: always; /* New syntax */
+}
+.classContainer{
+    flex-flow: row wrap;
+    width: 103%;
+}
