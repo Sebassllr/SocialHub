@@ -1,25 +1,25 @@
 import React from 'react';
-import "./PrincipalContainer.css";
+import classes from "./PrincipalContainer.module.css";
 import Characteristic from "../Characteristics/Characteristics";
 
 const pricipalContainer = (props) => {
+
     const characteristics = props.characteristics;
-
     const char = characteristics.map(char => (<Characteristic name={char}/>));
-
+    
     return(
-        <div className="box">
+        <div className={classes.box}>
             <div>
-                <div className="display-flex">
-                    <span className="center arvo title noselect">{props.name}</span>
+                <div className={classes.displayFlex}>
+                    <span className={[classes.center, classes.arvo, classes.title, classes.noselect].join(' ')}>{props.name}</span>
                 </div>
-                <div className="margin-content">
+                <div className={classes.marginContent}>
                     <hr/>
                     <div>
-                        <div className="description noselect">
+                        <div className={[classes.description, classes.noselect].join(' ')}>
                             {props.description}
                         </div>
-                        <div className="display-flex classContainer">
+                        <div className={[classes.displayFlex, classes.classContainer, classes.marginTop].join(' ')}>
                             {char}
                         </div>
                     </div>

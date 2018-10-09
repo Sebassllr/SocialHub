@@ -20,7 +20,7 @@
     margin-top: 5px;
     font-size: 30px;
 }
-.display-flex{
+.displayFlex{
     display: flex;
 }
 hr {
@@ -43,7 +43,10 @@ hr {
     display: flex;
     text-align: justify;
 }
-.margin-content{
+.marginTop{
+    margin-top: 10px;
+}
+.marginContent{
     margin: 5px 15px;
 }
 .item:nth-child(3n) {

@@ -1,8 +1,11 @@
 import React from 'react';
-import './Characteristics.css';
+import classes from './Characteristics.module.css';
 const characteristic = (props) => {
+
+    const styles = [classes.displayFlex, classes.noSelect, classes.characteristic].join(' ');
+
     return(
-        <div className="display-flex characteristic noselect">
+        <div className={styles}>
             <span>{props.name}</span>
         </div>
     )

@@ -9,10 +9,10 @@
 .characteristic:hover{
     background: #419CDC;
 }
-.display-flex{
+.displayFlex{
     display: flex;
 }
-.noselect {
+.noSelect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */

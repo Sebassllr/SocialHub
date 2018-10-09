@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
 import PricipalContainer from './PrincipalContainer/PrincipalContainer'
-import './App.css'
+import classes from './App.css'
 import Calendar from './Calendar/Calendar'
-import CalendarWeek from './Calendar/CalendarWeek'
 
 class App extends Component {
 
   render() {
 
-    let name = "Hola";
-    let description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor eros erat, sit amet facilisis neque fringilla non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent urna tortor, euismod at auctor ut, commodo ac turpis. Aenean blandit leo nec dolor pretium, ac ultricies erat auctor."
-    let characteristics = ["Caminante", "Volador", "Mamifero", "HOLA"];
+    const name = "Hola";
+    const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor eros erat, sit amet facilisis neque fringilla non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent urna tortor, euismod at auctor ut, commodo ac turpis. Aenean blandit leo nec dolor pretium, ac ultricies erat auctor."
+    const characteristics = ["Caminante", "Volador", "Mamifero", "HOLA"];
+    
+    const event = {
+      title: 'Nuevo',
+      start: new Date('2018', '10', '08'),
+      end: new Date('2018', '10', '09'),
+      allDay: true,
+    }
+
+    const event2 = {
+      title: 'Nuevo',
+      start: new Date('2018', '09', '08'),
+      end: new Date('2018', '09', '10'),
+      allDay: true,
+    }
+
+    const events = [event, event2];
+    const defaultView = 'week';
+    const views = ['week', 'month', 'agenda'];
 
     return (
-      <div className="display-flex">
+      <div className={classes.displayFlex}>
         <div>
           <PricipalContainer name={name} description={description} characteristics={characteristics}></PricipalContainer>
           <div className="height-200 width-500">
-            <Calendar/>
+            <Calendar 
+              events={events}
+              defaultView={defaultView}
+              views={views}
+              />
           </div>
-        </div>
-        <div className="height-200 width-500">
-          <CalendarWeek/>
         </div>
       </div>
     );
