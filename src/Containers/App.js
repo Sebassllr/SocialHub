@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PricipalContainer from './PrincipalContainer/PrincipalContainer'
+import PricipalContainer from '../Components/PrincipalContainer/PrincipalContainer'
 import classes from './App.css'
-import Calendar from './Calendar/Calendar'
+import Calendar from '../Components/Calendar/Calendar'
 
 class App extends Component {
 
