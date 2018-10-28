@@ -2,11 +2,22 @@ import React, { Component } from 'react';
 import PricipalContainer from '../Components/PrincipalContainer/PrincipalContainer'
 import classes from './App.css'
 import Calendar from '../Components/Calendar/Calendar'
+import TodoForm from '../Components/Form/TodoForm'
+import ReactDOM from 'react-dom';
+
+
 
 class App extends Component {
+  state = { count: 0, value: "my message goes here" };
 
+  handleChange = e => this.setState({ value: e.target.value });
+  handleClick = () => this.setState(({ count }) => ({ count: count + 1 }));
+
+  
+   
   render() {
 
+    const { count, value } = this.state;
     const name = "Hola";
     const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor eros erat, sit amet facilisis neque fringilla non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent urna tortor, euismod at auctor ut, commodo ac turpis. Aenean blandit leo nec dolor pretium, ac ultricies erat auctor."
     const characteristics = ["Caminante", "Volador", "Mamifero", "HOLA"];
@@ -17,6 +28,7 @@ class App extends Component {
       end: new Date('2018', '10', '09'),
       allDay: true,
     }
+
 
     const event2 = {
       title: 'Nuevo',
@@ -33,6 +45,11 @@ class App extends Component {
       <div className={classes.displayFlex}>
         <div>
           <PricipalContainer name={name} description={description} characteristics={characteristics}></PricipalContainer>
+          <div >
+          <TodoForm/>
+          </div>
+          
+        
           <div className="height-200 width-500">
             <Calendar 
               events={events}
@@ -47,3 +64,29 @@ class App extends Component {
 }
 
 export default App;
+/**
+ *  return (
+      <div className={classes.displayFlex}>
+        <div>
+          <PricipalContainer name={name} description={description} characteristics={characteristics}></PricipalContainer>
+          <div >
+          <DemoForm/>
+          </div>
+          
+        
+          <div className="height-200 width-500">
+            <Calendar 
+              events={events}
+              defaultView={defaultView}
+              views={views}
+              />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
+ * 
+ */
