@@ -37,9 +37,12 @@ class TodoForm extends Component {
   }
 
   render() {
+    
     return (
       <div className="card">
         <form onSubmit={this.handleSubmit} className="card-body">
+        <h1>Nuevo Evento</h1>
+        <legend>Creé un nuevo evento para compartir con su tribu.</legend>
           <div className="form-group">
             <input
               type="text"

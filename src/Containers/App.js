@@ -4,18 +4,21 @@ import classes from './App.css'
 import Calendar from '../Components/Calendar/Calendar'
 import TodoForm from '../Components/Form/TodoForm'
 import ReactDOM from 'react-dom';
-
+import { todos } from '../todos.json';
 
 
 class App extends Component {
-  state = { count: 0, value: "my message goes here" };
-
-  handleChange = e => this.setState({ value: e.target.value });
-  handleClick = () => this.setState(({ count }) => ({ count: count + 1 }));
+  constructor(){
+    super();
+    this.state = {
+      todos
+    }
+  }
 
   
    
   render() {
+    
 
     const { count, value } = this.state;
     const name = "Hola";
@@ -37,19 +40,19 @@ class App extends Component {
       allDay: true,
     }
 
-    const events = [event, event2];
+    const events = [event,event2];
     const defaultView = 'week';
     const views = ['week', 'month', 'agenda'];
-
+    console.log(todos);
     return (
       <div className={classes.displayFlex}>
         <div>
           <PricipalContainer name={name} description={description} characteristics={characteristics}></PricipalContainer>
+          
           <div >
           <TodoForm/>
           </div>
           
-        
           <div className="height-200 width-500">
             <Calendar 
               events={events}
