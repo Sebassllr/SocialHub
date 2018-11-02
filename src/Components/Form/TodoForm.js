@@ -7,7 +7,6 @@ class TodoForm extends Component {
       nombre: '',
       lugar: '',
       descripcion: '',
-      priority: 'low',
       hora:'',
       fecha:''
     };
@@ -22,7 +21,6 @@ class TodoForm extends Component {
       nombre: '',
       lugar: '',
       descripcion: '',
-      priority: 'low',
       hora:'',
       fecha:''
     });
@@ -93,20 +91,8 @@ class TodoForm extends Component {
               placeholder="Fecha"
               />
           </div>
-          <div className="form-group">
-            <select
-                name="priority"
-                className="form-control"
-                value={this.state.priority}
-                onChange={this.handleInputChange}
-              >
-              <option>low</option>
-              <option>medium</option>
-              <option>high</option>
-            </select>
-          </div>
           <button type="submit" className="btn btn-primary">
-            Save
+            Guardar
           </button>
         </form>
       </div>
