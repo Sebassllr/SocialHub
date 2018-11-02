@@ -4,7 +4,7 @@ import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import classes from "../Calendar/Calendar.module.css"
 
-const calendar = (props) => {
+const calendar = props => {
 
     const localizer = BigCalendar.momentLocalizer(moment);
 

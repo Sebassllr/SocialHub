@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PricipalContainer from '../Components/PrincipalContainer/PrincipalContainer'
 import classes from './App.css'
 import Calendar from '../Components/Calendar/Calendar'
+import Input from '../Components/Input/Input'
 
 class App extends Component {
 
@@ -13,9 +14,9 @@ class App extends Component {
     
     const event = {
       title: 'Nuevo',
-      start: new Date('2018', '10', '08'),
-      end: new Date('2018', '10', '09'),
-      allDay: true,
+      start: new Date(2018, 10, 18, 13, 0),
+      end: new Date('2018', '10', '18', '13', '30'),
+      allDay: false,
     }
 
     const event2 = {
@@ -29,9 +30,9 @@ class App extends Component {
     const defaultView = 'week';
     const views = ['week', 'month', 'agenda'];
 
-    return (
-      <div className={classes.displayFlex}>
-        <div>
+/**
+ * Contenedor principal y calendario
+ *      <div className={classes.displayFlex}>
           <PricipalContainer name={name} description={description} characteristics={characteristics}></PricipalContainer>
           <div className="height-200 width-500">
             <Calendar 
@@ -39,8 +40,13 @@ class App extends Component {
               defaultView={defaultView}
               views={views}
               />
-          </div>
-        </div>
+           </div>
+ * 
+ */
+
+    return (
+      <div className={classes.displayFlex}>
+
       </div>
     );
   }
